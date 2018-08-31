@@ -4,6 +4,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -14,8 +17,11 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 @ApiModel(description = "All details about a user")
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue
     private Integer id;
     @Size(min=2, message="name should have at least 2 characters")
     @ApiModelProperty(notes = "name should have at least 2 characters")

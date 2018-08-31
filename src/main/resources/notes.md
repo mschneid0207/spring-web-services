@@ -15,3 +15,14 @@ Was muss man beachten!!!!
 1. 3 und 4 keine Möglichkeit vom Caching
 2. Dokumentation bei 3 und 4 nicht so einfach
 3. 3 und 4 nicht einfach aufzurufen über Browser
+
+`Spring Security - Basic Authentication`
+nur in pom starter security mitaufnehmen und application.properties anpassen. Funktioniert aber leider nicht.
+
+`Spring JPA`
+@Entitiy
+@Id
+@GeneratedValue
+
+spring.jpa.show-sql=true (zeigt SQLs im Log an)
+spring.h2.console.enabled=true (ermöglicht das Zugreifen auf die h2 console über localhost:8080/h2-console)
