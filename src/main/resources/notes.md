@@ -69,4 +69,12 @@ nochmals Hateos anschauen
 3. schnellere Release-Zyklen Neue Features bringt man schneller live
 
 `Spring Cloud Config Server`
-Was ist das?
+Was ist das? 
+Spring Cloud Config Server stellt jedem Service der an ihm angebunden ist, zentral Konfigurationen zur Verfügung
+Diese Konfiguration ist z.B. ein GitRepository
+1. @EnableConfigServer 
+wichtig zu setzen, damit die Spring Boot Applikation als Config Server funktionieren kann.
+2. in der application.properties spring.cloud.config.server.git.uri setzen
+
+`@ConfigurationProperties`
+wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
