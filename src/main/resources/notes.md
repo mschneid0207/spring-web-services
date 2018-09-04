@@ -75,6 +75,8 @@ Diese Konfiguration ist z.B. ein GitRepository
 1. @EnableConfigServer 
 wichtig zu setzen, damit die Spring Boot Applikation als Config Server funktionieren kann.
 2. in der application.properties spring.cloud.config.server.git.uri setzen
+3. Services die mit dem Cloud Config Server sprechen wollen müssen ihre application.properties zu 
+    bootstrap.properties abändern und dort spring.cloud.config.uri setzen.
 
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
