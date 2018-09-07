@@ -84,6 +84,23 @@ wichtig zu setzen, damit die Spring Boot Applikation als Config Server funktioni
 
 `Spring Feign`
 Spring Feign ist ein Rest Client, der sehr einfach Zugriff auf einen anderen Restservice ermöglicht.
+@FeignClient(name = "currency-exchange-service")
+
+`Spring Ribbon`
+Spring Ribbon ist ein Load Balancer.
+@RibbonClient(name = "currency-exchange-service") + 
+currency-exchange-service.ribbon.listOfServers=http://localhost:8000,http://localhost:8001 (application.properties)
+
+`Spring Eureka`
+Eureka ist ein Naming Service
+Warum benötigt man einen Naming Service? Wenn man Instanzen eines Microservices
+erhöhen oder reduzieren möchte, dann müsste man jedes Mal listOfServers anpassen.
+Dies ist jedoch nicht nötig mit einem Naming Service. Hier frägt der Service erst an
+bevor er seinen Call an einen anderen Service absetzt. D.h. so erfährt er automatisch von 
+den aktiven Instanzen eines Services.
+1. @EnableEurekaServer (wichtig zu setzen)
+2. Port 8761
+3. @EnableDiscoveryClient und eureka.client.service-url.default-zone=http://localhost:8761/eureka (application.properties)
 
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
