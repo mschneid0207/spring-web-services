@@ -77,6 +77,13 @@ wichtig zu setzen, damit die Spring Boot Applikation als Config Server funktioni
 2. in der application.properties spring.cloud.config.server.git.uri setzen
 3. Services die mit dem Cloud Config Server sprechen wollen müssen ihre application.properties zu 
     bootstrap.properties abändern und dort spring.cloud.config.uri setzen.
+    
+`Wie können sich Services untereinander aufrufen`
+1. Spring bietet als erste Alternative das RestTemplate an. RestService calls RestService
+2. Spring Feign (Rest Client)
+
+`Spring Feign`
+Spring Feign ist ein Rest Client, der sehr einfach Zugriff auf einen anderen Restservice ermöglicht.
 
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
