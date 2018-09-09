@@ -102,5 +102,11 @@ den aktiven Instanzen eines Services.
 2. Port 8761
 3. @EnableDiscoveryClient und eureka.client.service-url.default-zone=http://localhost:8761/eureka (application.properties)
 
+`Zuul - API Gateway`
+1. Authentication und Security
+2. Limits pro Aufruf in der Stunde
+3. Fehler Toleranz
+4. Aufsetzen mit @EnableZuul und natürlich wieder @EnableDiscoveryClient + application.properties
+
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
