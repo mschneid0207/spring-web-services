@@ -108,5 +108,9 @@ den aktiven Instanzen eines Services.
 3. Fehler Toleranz
 4. Aufsetzen mit @EnableZuul und natürlich wieder @EnableDiscoveryClient + application.properties
 
+
+`Spring Sleuth`
+Tracing in verteilten Systemen. Spring Sleuth generiert eine Id für einen Request
+
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
