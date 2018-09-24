@@ -112,5 +112,16 @@ den aktiven Instanzen eines Services.
 `Spring Sleuth`
 Tracing in verteilten Systemen. Spring Sleuth generiert eine Id für einen Request
 
+`Zipkin`
+Tracing über verschiedene Requests
+
+`Spring Cloud Bus`
+1. Problemstellung: LimitService greift auf Spring Cloud Config Server. Nun ändert man einen Wert 
+am Config-Server und jede Instanz des Limit-Services sollte nun localhost:8080/actuator/refresh machen.
+Wie kann man das automatisieren, dass jede Instanz den neuen Wert automatisch zieht.
+2. Mit Spring Cloud Bus (z.B. Kafka oder RabbitMq) kann man das Problem lösen. 
+Mit http://localhost:8080/actuator/bus-refresh post werden auch die anderen Instanzen automatisch upgedated.
+Wichtig ist hierfür eine Maven-Dependency spring-cloud-starter-bus-amqp.
+
 `@ConfigurationProperties`
 wenn die Variablennamen die Namen in der application.properties matchen, dann matcht spring boot 
